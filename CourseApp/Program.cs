@@ -6,8 +6,8 @@ namespace CourseApp
     {
         public static double Calc(double a, double b, double x)
         {
-            var numerator = Math.Log(Math.Pow(b, 2) - Math.Pow(x, 2)) / Math.Log(a);
-            var denominator = Math.Pow(Math.Abs(Math.Pow(x, 2) - Math.Pow(a, 2)), 1 / 3.0);
+            var numerator = 1 + Math.Pow(Math.Log(x / a), 2);
+            var denominator = b - Math.Exp(x / a);
             var y = numerator / denominator;
             return y;
         }
@@ -43,9 +43,9 @@ namespace CourseApp
         public static void Main(string[] args)
         {
             const double a = 2.0;
-            const double b = 4.1;
+            const double b = 0.95;
             Console.WriteLine($"--------- TASK A --------------");
-            var taskA = TaskA(a, b, 0.77, 1.77, 0.2);
+            var taskA = TaskA(a, b, 1.25, 2.75, 0.3);
             foreach (var item in taskA)
             {
                 var(x, y) = item;
@@ -53,7 +53,7 @@ namespace CourseApp
             }
 
             Console.WriteLine($"--------- TASK B --------------");
-            double[] xItems = { 1.24, 1.38, 2.38, 3.21, 0.68 };
+            double[] xItems = { 2.2, 3.78, 4.51, 6.58, 1.2 };
             var taskB = TaskB(a, b, xItems);
             foreach (var item in taskB)
             {
@@ -62,7 +62,7 @@ namespace CourseApp
             }
 
             Console.WriteLine("Hello World!");
-            Console.WriteLine("Konstantinov Eugeny");
+            Console.WriteLine("Vjacheslav Gvozdev");
             Console.ReadLine();
         }
     }

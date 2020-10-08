@@ -1,5 +1,5 @@
 # Tprogramming_42_2020
 
-## Konstantinov Eugeny
+## Vjacheslav Gvozdev
 
-First lab demo.
+First lab.
