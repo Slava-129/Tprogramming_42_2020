@@ -61,8 +61,16 @@ namespace CourseApp
                 Console.WriteLine($"x={x}, y={y}");
             }
 
+            Console.WriteLine($"-------------------------------");
             Console.WriteLine("Hello World!");
             Console.WriteLine("Vjacheslav Gvozdev");
+            Console.WriteLine($"--------- Class ---------------");
+            Class.Dog dog = new Class.Dog();
+            dog.GetInfo();
+            dog.EditInfo(" ", " ", "0");
+            dog.GetInfo();
+            dog.EditInfo("--------", "Сentral Asian Ovcharka", " ");
+            dog.GetInfo();
             Console.ReadLine();
         }
     }
