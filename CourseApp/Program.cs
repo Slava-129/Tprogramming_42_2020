@@ -64,13 +64,30 @@ namespace CourseApp
             Console.WriteLine($"-------------------------------");
             Console.WriteLine("Hello World!");
             Console.WriteLine("Vjacheslav Gvozdev");
-            Console.WriteLine($"--------- Class ---------------");
-            Class.Dog dog = new Class.Dog();
-            dog.GetInfo();
-            dog.EditInfo(" ", " ", "0");
-            dog.GetInfo();
-            dog.EditInfo("--------", "Сentral Asian Ovcharka", " ");
-            dog.GetInfo();
+            Console.WriteLine($"--------- Class ---------------\n");
+            Dog dog_1 = new Dog();
+            Dog dog_2 = new Dog("dog_2");
+            Cat cat_1 = new Cat("Cat_1", " ");
+            Cat cat_2 = new Cat("cat_2", "abyssinian", 2);
+            Animal[] animals = new Animal[] { dog_1, dog_2, cat_1, cat_2 };
+            foreach (var animal in animals)
+            {
+                Console.WriteLine(animal.DisplayInf());
+            }
+
+            Console.WriteLine();
+            dog_1.EditInf("dog_1", " ", 0);
+            dog_2.Breed = "d";
+            dog_2.EditAge(3);
+            Console.WriteLine(dog_2.GetAge());
+            cat_1.EditInf("Cat-1", "a", 1);
+
+            foreach (var animal in animals)
+            {
+                Console.WriteLine(animal.DisplayInf());
+                Console.WriteLine(animal.Vois());
+            }
+
             Console.ReadLine();
         }
     }
