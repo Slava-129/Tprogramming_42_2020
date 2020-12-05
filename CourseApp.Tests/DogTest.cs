@@ -11,7 +11,7 @@ namespace CourseApp.Tests
         public void TestDisplayInf(string n, string b, int a, string exp)
         {
             Dog actualResult = new Dog(n, b, a);
-            Assert.Equal(exp, actualResult.DisplayInf());
+            Assert.Equal(exp, actualResult.ToString());
         }
 
         [Theory]

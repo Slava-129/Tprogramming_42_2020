@@ -40,7 +40,7 @@ namespace CourseApp.Tests
         {
             Cat actualResult = new Cat();
             actualResult.EditInf(n, b, a);
-            Assert.Equal(exp, actualResult.DisplayInf());
+            Assert.Equal(exp, actualResult.ToString());
         }
     }
 }
