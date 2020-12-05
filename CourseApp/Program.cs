@@ -65,11 +65,11 @@ namespace CourseApp
             Console.WriteLine("Hello World!");
             Console.WriteLine("Vjacheslav Gvozdev");
             Console.WriteLine($"--------- Class ---------------\n");
-            Dog dog_1 = new Dog();
-            Dog dog_2 = new Dog("dog_2");
-            Cat cat_1 = new Cat("Cat_1", " ");
-            Cat cat_2 = new Cat("cat_2", "abyssinian", 2);
-            Animal[] animals = new Animal[] { dog_1, dog_2, cat_1, cat_2 };
+            Dog dog1 = new Dog();
+            Dog dog2 = new Dog("dog2");
+            Cat cat1 = new Cat("Cat1", " ");
+            Cat cat2 = new Cat("cat2", "abyssinian", 2);
+            Animal[] animals = new Animal[] { dog1, dog2, cat1, cat2 };
             Array.Sort(animals, new AnimalComparer());
             foreach (var animal in animals)
             {
@@ -77,11 +77,11 @@ namespace CourseApp
             }
 
             Console.WriteLine();
-            dog_1.EditInf("dog_1", " ", 0);
-            dog_2.Breed = "d";
-            dog_2.EditAge(3);
-            Console.WriteLine(dog_2.GetAge());
-            cat_1.EditInf("Cat-1", "a", 1);
+            dog1.EditInf("dog1", " ", 0);
+            dog2.Breed = "d";
+            dog2.EditAge(3);
+            Console.WriteLine(dog2.GetAge());
+            cat1.EditInf("Cat-1", "a", 1);
 
             foreach (var animal in animals)
             {
