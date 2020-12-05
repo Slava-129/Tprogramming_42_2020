@@ -13,21 +13,21 @@ namespace CourseApp
             {
             }
 
-            public Animal(string new_name)
-            : this(new_name, " ", 0)
+            public Animal(string newName)
+            : this(newName, " ", 0)
             {
             }
 
-            public Animal(string new_name, string new_breed)
-            : this(new_name, new_breed, 0)
+            public Animal(string newName, string newBreed)
+            : this(newName, newBreed, 0)
             {
             }
 
-            public Animal(string new_name, string new_breed, int new_age)
+            public Animal(string newName, string newBreed, int newAge)
             {
-                this.Name = new_name;
-                this.Breed = new_breed;
-                this.Age = new_age;
+                this.Name = newName;
+                this.Breed = newBreed;
+                this.Age = newAge;
             }
 
             public virtual string Name
@@ -90,13 +90,13 @@ namespace CourseApp
                 }
             }
 
-            public virtual string DisplayInf() => $"Name: {Name}  Breed: {Breed}  Age: {Age}";
+            public override string ToString() => $"Name: {Name}  Breed: {Breed}  Age: {Age}";
 
-            public virtual void EditInf(string new_name, string new_breed, int new_age)
+            public virtual void EditInf(string newName, string newBreed, int newAge)
             {
-                    Name = new_name;
-                    Breed = new_breed;
-                    Age = new_age;
+                    Name = newName;
+                    Breed = newBreed;
+                    Age = newAge;
             }
 
             public abstract string Vois();

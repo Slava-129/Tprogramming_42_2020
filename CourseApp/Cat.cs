@@ -9,26 +9,26 @@ namespace CourseApp
         {
         }
 
-        public Cat(string new_name)
-        : base(new_name)
+        public Cat(string newName)
+        : base(newName)
         {
         }
 
-        public Cat(string new_name, string new_breed)
-        : base(new_name, new_breed)
+        public Cat(string newName, string newBreed)
+        : base(newName, newBreed)
         {
         }
 
-        public Cat(string new_name, string new_breed, int new_age)
-        : base(new_name, new_breed, new_age)
+        public Cat(string newName, string newBreed, int newAge)
+        : base(newName, newBreed, newAge)
         {
         }
 
-        public override string DisplayInf() => $"Cat:\nName: {Name}  Breed: {Breed}  Age: {Age}";
+        public override string ToString() => $"Cat:\nName: {Name}  Breed: {Breed}  Age: {Age}";
 
-        public override void EditInf(string new_name, string new_breed, int new_age)
+        public override void EditInf(string newName, string newBreed, int newAge)
         {
-            base.EditInf(new_name, new_breed, new_age);
+            base.EditInf(newName, newBreed, newAge);
         }
 
         public override string Vois() => "*Мяу*\n";

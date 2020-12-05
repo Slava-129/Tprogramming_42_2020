@@ -70,9 +70,10 @@ namespace CourseApp
             Cat cat_1 = new Cat("Cat_1", " ");
             Cat cat_2 = new Cat("cat_2", "abyssinian", 2);
             Animal[] animals = new Animal[] { dog_1, dog_2, cat_1, cat_2 };
+            Array.Sort(animals, new AnimalComparer());
             foreach (var animal in animals)
             {
-                Console.WriteLine(animal.DisplayInf());
+                Console.WriteLine(animal);
             }
 
             Console.WriteLine();
@@ -84,7 +85,7 @@ namespace CourseApp
 
             foreach (var animal in animals)
             {
-                Console.WriteLine(animal.DisplayInf());
+                Console.WriteLine(animal);
                 Console.WriteLine(animal.Vois());
             }
 

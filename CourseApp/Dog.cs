@@ -9,31 +9,31 @@ namespace CourseApp
         {
         }
 
-        public Dog(string new_name)
-        : base(new_name)
+        public Dog(string newName)
+        : base(newName)
         {
         }
 
-        public Dog(string new_name, string new_breed)
-        : base(new_name, new_breed)
+        public Dog(string newName, string newBreed)
+        : base(newName, newBreed)
         {
         }
 
-        public Dog(string new_name, string new_breed, int new_age)
-        : base(new_name, new_breed, new_age)
+        public Dog(string newName, string newBreed, int newAge)
+        : base(newName, newBreed, newAge)
         {
         }
 
-        public override string DisplayInf() => $"Dog:\nName: {Name}  Breed: {Breed}  Age: {Age}";
+        public override string ToString() => $"Dog:\nName: {Name}  Breed: {Breed}  Age: {Age}";
 
-        public override void EditInf(string new_name, string new_breed, int new_age)
+        public override void EditInf(string newName, string newBreed, int newAge)
         {
-            base.EditInf(new_name, new_breed, new_age);
+            base.EditInf(newName, newBreed, newAge);
         }
 
-        public void EditAge(int new_age)
+        public void EditAge(int newAge)
         {
-            Age = new_age;
+            Age = newAge;
         }
 
         public string GetAge() => $"Age: {Age}\n";
