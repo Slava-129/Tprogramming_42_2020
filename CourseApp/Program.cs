@@ -40,6 +40,29 @@ namespace CourseApp
             return res;
         }
 
+        public static string Age(DateTime brithday, DateTime today)
+        {
+            if (today > brithday)
+            {
+                double age = today.Year - brithday.Year;
+                double month = today.Month + (12 * age) - brithday.Month;
+                if (today.Day < brithday.Day)
+                {
+                    month--;
+                }
+
+                return $"Age:\n day:{today.Subtract(brithday).TotalDays}\n Month:{month}\n Year:{age}";
+            }
+            else if (today == brithday)
+            {
+                return "The dates are equal";
+            }
+            else
+            {
+                return "The date has not come";
+            }
+        }
+
         public static void Main(string[] args)
         {
             const double a = 2.0;
@@ -89,6 +112,10 @@ namespace CourseApp
                 Console.WriteLine(animal.Vois());
             }
 
+            Console.WriteLine($"---------- Date ---------------\n");
+            DateTime brithday = new DateTime(2001, 7, 14);
+            DateTime today = DateTime.Today;
+            Console.WriteLine(Age(brithday, today));
             Console.ReadLine();
         }
     }
