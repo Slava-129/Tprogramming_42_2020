@@ -1,14 +1,12 @@
 using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace CourseApp
 {
-        public class AnimalComparer : IComparer
+        public class AnimalComparer : IComparer<Animal>
         {
-            public int Compare(object o1, object o2)
+            public int Compare(Animal a1, Animal a2)
             {
-                Animal a1 = o1 as Animal;
-                Animal a2 = o2 as Animal;
                 return string.Compare(a1.Name, a2.Name);
             }
         }

@@ -26,11 +26,6 @@ namespace CourseApp
 
         public override string ToString() => $"Cat:\nName: {Name}  Breed: {Breed}  Age: {Age}";
 
-        public override void EditInf(string newName, string newBreed, int newAge)
-        {
-            base.EditInf(newName, newBreed, newAge);
-        }
-
         public override string Vois() => "*Мяу*\n";
     }
 }

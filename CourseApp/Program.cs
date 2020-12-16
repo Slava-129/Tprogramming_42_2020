@@ -44,14 +44,15 @@ namespace CourseApp
         {
             if (today > brithday)
             {
-                double age = today.Year - brithday.Year;
-                double month = today.Month + (12 * age) - brithday.Month;
-                if (today.Day < brithday.Day)
+                double month = today.Month - brithday.Month;
+                double day = today.Day - brithday.Day;
+                if (day < 0)
                 {
                     month--;
+                    day = today.AddDays(-brithday.Day).Day + 1;
                 }
 
-                return $"Age:\n day:{today.Subtract(brithday).TotalDays}\n Month:{month}\n Year:{age}";
+                return $"Age: Year:{today.Year - brithday.Year} Month: {month} Day: {day}";
             }
             else if (today == brithday)
             {

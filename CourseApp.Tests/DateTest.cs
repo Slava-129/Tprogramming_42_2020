@@ -6,14 +6,15 @@ namespace CourseApp.Tests
     public class DateTest
     {
         [Theory]
-        [InlineData(2001, 7, 14, 19, 232, 7088)]
-        [InlineData(1900, 1, 1, 120, 1451, 44172)]
-        [InlineData(2018, 2, 5, 2, 34, 1038)]
+        [InlineData(2001, 7, 14, 19, 4, 26)]
+        [InlineData(1900, 1, 1, 120, 11, 8)]
+        [InlineData(2018, 2, 5, 2, 10, 4)]
+        [InlineData(1960, 9, 27, 60, 2, 13)]
         public void TestAge(int y, int m, int d, int expY, int expM, int expD)
         {
             DateTime brithday = new DateTime(y, m, d);
             DateTime date = new DateTime(2020, 12, 9);
-            string exp = $"Age:\n day:{expD}\n Month:{expM}\n Year:{expY}";
+            string exp = $"Age: Year:{expY} Month: {expM} Day: {expD}";
             var res = Program.Age(brithday, date);
             Assert.Equal(exp, res);
         }

@@ -26,11 +26,6 @@ namespace CourseApp
 
         public override string ToString() => $"Dog:\nName: {Name}  Breed: {Breed}  Age: {Age}";
 
-        public override void EditInf(string newName, string newBreed, int newAge)
-        {
-            base.EditInf(newName, newBreed, newAge);
-        }
-
         public void EditAge(int newAge)
         {
             Age = newAge;
