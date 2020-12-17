@@ -10,6 +10,10 @@ namespace CourseApp.Tests
         [InlineData(1900, 1, 1, 120, 11, 8)]
         [InlineData(2018, 2, 5, 2, 10, 4)]
         [InlineData(1960, 9, 27, 60, 2, 13)]
+        [InlineData(2010, 12, 10, 9, 11, 30)]
+        [InlineData(2019, 12, 7, 1, 0, 2)]
+        [InlineData(2017, 12, 10, 2, 11, 30)]
+        [InlineData(2017, 6, 5, 3, 6, 4)]
         public void TestAge(int y, int m, int d, int expY, int expM, int expD)
         {
             DateTime brithday = new DateTime(y, m, d);
