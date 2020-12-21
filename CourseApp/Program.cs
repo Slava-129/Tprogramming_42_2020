@@ -44,7 +44,7 @@ namespace CourseApp
         {
             if (today > brithday)
             {
-                int year = today.AddYears(-brithday.Year).Year;
+                int year = new DateTime((today - brithday).Ticks).Year - 1;
                 int month = today.Month - brithday.Month;
                 int day = today.Day - brithday.Day;
                 if (day < 0)
