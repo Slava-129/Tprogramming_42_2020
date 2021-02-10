@@ -4,4 +4,4 @@
 
 First lab.
 
-file:///D:/Tprogramming_42_2020/index.html
+https://slava-129.github.io/Tprogramming_42_2020/
